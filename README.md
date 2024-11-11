@@ -1,7 +1,5 @@
 # alternanceRapportHebdomadaire
 
-## alternance
-
 ## contexte/reprise de mon stage
 
 Je travail sur le projet Slang qui traduit le code de la machine virtuelle Pharo(VM) du Pharo au C en lui appliquant des tranformations/optimisations propre au VM (typage, inlining).

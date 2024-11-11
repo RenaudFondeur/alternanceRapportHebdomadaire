@@ -1,10 +1,10 @@
 # alternanceRapportHebdomadaire
 
-## contexte/reprise de mon stage
+## contexte/reprise de mon stage de Licence 3
 
 Je travail sur le projet Slang qui traduit le code de la machine virtuelle Pharo(VM) du Pharo au C en lui appliquant des tranformations/optimisations propre au VM (typage, inlining).
 
-Le code obtenu est répartie entre plusieurs fichiers C selon la compilation et l'architecture (mac, windows, linux) ciblé allant jusqu'à + de 90000 de code, vu la taille et la complexité de la VM, je n'ai qu'une très vague idée des optimisations et transformations qui sont appliqué sur la VM. Je principalement touché lors de mon stage à la partie traduction de modèle de code Pharo vers C (priorité de l'exécutions des éléments, types et équivalence de syntaxe/du modèle objet en C)
+Le code obtenu est répartie entre plusieurs fichiers C selon la compilation et l'architecture (mac, windows, linux) ciblé allant jusqu'à + de 90000 de code, vu la taille et la complexité de la VM, je n'ai qu'une très vague idée des optimisations et transformations qui sont appliqué sur la VM. J'ai principalement touché lors de mon stage à la partie traduction de modèle de code Pharo vers C (priorité de l'exécutions des éléments, types et équivalence de syntaxe/du modèle objet en C)
 
 ## 4/11/2024 au 10/11/2024 
 

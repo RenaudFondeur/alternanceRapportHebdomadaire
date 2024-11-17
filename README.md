@@ -14,3 +14,6 @@ j'ai commencé dans cette optique à normaliser les variables sortis en C de la 
 
 ## 11/11/2024 au 17:11/2024
 
+fin de la normalisation des variables mais pas des tests , résolutions de bugs avec l'aide de guille.
+
+semaine courte : lundi férié et Dojo sur la VM mardi aprem 

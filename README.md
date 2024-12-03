@@ -35,3 +35,9 @@ Egalement des petits bugs liés aux noms de variables de la partie C non génér
 
 Test presque finie.
 
+## 25/11/2024 au 01/12/2024
+
+Fin de la normalisation des tests et pull request 
+
+pair programming le mardi pour introduire des bases de polymorphisme dans la VM (changer de garbage collector pendant l'exécution)
+

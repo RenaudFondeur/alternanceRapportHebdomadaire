@@ -41,3 +41,24 @@ Fin de la normalisation des tests et pull request
 
 pair programming le mardi pour introduire des bases de polymorphisme dans la VM (changer de garbage collector pendant l'exécution)
 
+## 02/12/2024 au 08/12/2024
+
+début de la résolution des warnings self assign (x = x) dù au polymorphisme et à l'inlining.
+
+l'idée est d'étendre le visiteur d'ast qui élimine le code mort pour prendre en compte ce cas, cela permet de supprimer le besoin de savoir d'ou vient l'erreur.
+
+la plupart des self assign sont dans des do, while et if, ce sont des selecteurs qui ne sont pas pris en compte par l'élimination de code mort qui ne les considèrent pas comme des méthode sans effets de bord. j'ai donc commencer à les intégrer égalements.
+
+début égalements des tests associés 
+
+## 09/12/2024 au 15/12/2024
+
+à l'université toute la semaine 
+
+## 16/12/2024 au 22/12/2024
+
+à l'université toute la semaine 
+
+## 23/12/2024 au 29/12/2024
+
+en vacances toute la semaine 

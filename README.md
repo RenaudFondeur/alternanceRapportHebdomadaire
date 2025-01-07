@@ -62,3 +62,9 @@ début égalements des tests associés
 ## 23/12/2024 au 29/12/2024
 
 en vacances toute la semaine 
+
+## 30/12/2024 au 05/01/2025
+
+en vacances jusque jeudi 
+
+continuation dans le fix des warnings liés au self assignement

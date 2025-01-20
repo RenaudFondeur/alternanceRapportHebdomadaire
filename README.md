@@ -68,3 +68,14 @@ en vacances toute la semaine
 en vacances jusque jeudi 
 
 continuation dans le fix des warnings liés au self assignement
+
+## 06/01/2025 au 12/01/2025
+
+fin du fix sur les self assign et pull request.
+
+## 13/01/2025 au 19/01/2025
+
+début de l'implémentation d'un algorithme d'élimination de code mort afin de compléter/remplacer celui que Slang a.
+assistance à un séminaire sur la représentation graphique de session de débuguage.
+
+

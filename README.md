@@ -78,4 +78,45 @@ fin du fix sur les self assign et pull request.
 début de l'implémentation d'un algorithme d'élimination de code mort afin de compléter/remplacer celui que Slang a.
 assistance à un séminaire sur la représentation graphique de session de débuguage.
 
+## 20/01/2025 au 17/02/2025
 
+implémentation de l'algorithme
+
+adaptation au spécificité de Slang découverte au fur et à mesure:
+ 
+Tout le code n'est pas un noeud dans l'AST, les définitions de variables locales et globales et certaines macros ne sont pas dedans.
+
+Beaucoup de correction dans Slang de transformations rendant le parcours de l'AST incorrect (mauvaise mise à jour du parent, même noeud utilisé à plusieurs endroit).
+
+Réfactor de la génération de fichiers pour séparer clairement les transformation d'AST et l'écriture de code C et déplacement du pass de l'algorithme juste avant l'émission de code dans un fichier.
+
+
+Début de la migration de tous les tests vers le nouvel algorithme.
+
+
+## 17/02/2025 au 23/02/2025
+
+en vacances toutes la semaine
+
+## 24/02/2025 au 02/03/2025
+
+à l'université toute la semaine
+
+## 03/03/2025 au 30/03/2025
+
+Fin de la migration des tests + ajout de nouveaux.
+
+Assitance à un séminaire sur l'IA.
+
+Lorsqu'une globale est utilisé seulement par une méthode, sa définition est déplacé dans celle-ci.
+Ajout de tests pour cette localisation.
+
+Fix un bug avec un vieux check qui supprime certaines globales avec 0 référence ou après leur localisation, déplacement du check dans sa super class pour le lancer sur tout les fichiers et amélioration du check pour prendre en compte toute les globales.
+
+Certaines globales sont utilisées seulement dans des macros définis en dur ou servent seulement à définir d'autres globales ou encore ne doivent pas être localisées.
+Le check gardait ces variables localisées en double ainsi que celles qui ne semblent pas utilisées du fait de son bug.
+Elles sont actuellement invisible pour Slang, on a donc besoin maintenant de marquer (en dur) leurs utilisation.
+
+Séparation clair des globales qui seront mis dans des headers et celle qui sont propre à un fichier, l'ancien moyen de marquer une variable comme utile était de la déclarer en export.
+
+Supression manuelle de code mort et macros dépréciés dans le code non généré + petit refactor simple de certaine macros (définition de locale dans la macro).

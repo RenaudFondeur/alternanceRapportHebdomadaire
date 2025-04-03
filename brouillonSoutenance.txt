@@ -1,0 +1,35 @@
+A/ Quelle est la mission (ou partie de mission) choisie ?
+
+Ma mission consiste à moderniser l'outil de transpilation de code Pharo en code C nommé Slang.
+Il est utilisé spécifiquement par l'équipe de maintenance de la machine virtuelle (VM) afin de travailler dans l'environnement haut niveau objet de Pharo.
+Parmi les avantages on trouve la configuration facile de différentes VM et le support du modèle objet pour effectuer du génie logiciel clair sur la VM.
+Slang est un vieil outil qui ne s'aligne plus avec les versions les plus récentes de C et tout simplement produit du code fonctionnel mais rempli d'erreurs (des milliers).
+La plus grande partie de l'alternance est la correction de l'outil avant l'ajout de nouvelle fonctionnalités.
+
+B/ Dans quel environnement technique ?
+
+Le code de la VM est donc majoritairement codé en Pharo avec des considérations supporté par Slang pour le futur code C :
+
+- type, taille et alignement des variables/pointeurs et leurs arithmétiques.
+- indiquation d'appel de méthode C et annotation propre à C (déclaration, import et export, type de retour).
+- notion de macros, stack, primitives et autres
+
+L'AST obtenu suit de manière automatique divers simplification/transformation de branches pour s'adapter à C ou optimiser le code.
+La plupart conduisent à diminuer la qualité du code (branche vide, noeud duppliqué et appel de fonction non nécessaire).
+
+Le code de Slang étant vieux, il est principalement fait de manière à ménager les ressource de l'ordinateur.
+De ce fait, la plupart des transformation sont éclatées sur tout le code de l'outil.
+L'ajout de nouvelle fonctionnalités et la maintenance de Slang demande donc une connaissance de l'outil qui aujourd'hui ne devrait plus être nécessaire.
+
+Je travaille donc également en Pharo avec des considérations pour le langage C.
+J'utilise git pour faire des demandes de pull request tout en m'aidant de jenkins pour vérifier celle-ci.
+
+C/ Avec quels enjeux pour l'entreprise et/ou le client ?
+
+Il y a deux grands enjeux pour l'équipe de la VM :
+
+Le fait que les warnings surviennent naturellement avec l'ajout de nouvelles fonctionnalités ainsi que leur nombre accumulé plus la lisibilité du code généré rend la review de code difficile.
+Certains bug connus de la VM ont certainement pour cause le code généré et non la logique derrière celui-ci. 
+
+Avoir un Slang de conception plus propre rendrait plus facile le support de nouvelles fonctionnalités pour la VM
+(semblant de polymorphisme en C et support de type et structure complexe).
